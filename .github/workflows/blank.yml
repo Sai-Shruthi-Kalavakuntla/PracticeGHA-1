@@ -5,5 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Practice GHA
-        run: echo "Practicing GitHub Actions"
+        run: |
+          echo "Practicing GitHub Actions-line 1"
+          echo "Practicing GitHub Actions-line 1"
       
