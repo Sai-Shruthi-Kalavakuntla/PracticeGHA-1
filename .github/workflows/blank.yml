@@ -1,0 +1,9 @@
+name: PracticeGHA
+on: workflow_dispatch
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Practice GHA
+        run: echo "Practicing GitHub Actions"
+      
