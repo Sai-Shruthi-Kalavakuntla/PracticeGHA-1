@@ -1,11 +1,20 @@
 name: PracticeGHA
 on: workflow_dispatch
 jobs:
-  practice:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Practice GHA
-        run: |
-          echo "Practicing GitHub Actions-line 1"
-          echo "Practicing GitHub Actions-line 1"
+      - name: Build setup
+        run: echo "Build setup completed"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tests setup
+        run: echo "Tests setup completed"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment setup
+        run: echo "Deployment setup completed"
+    
       
