@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Connecting to Env
-        env:
-          APP_ENV: "prod"
+        #env:
+         # APP_ENV: "prod"
         run: echo "This workflow runs on $APP_ENV"
