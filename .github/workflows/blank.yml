@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tests setup
-        run: echo "Tests setup for, ${{ vars.My_Name }}"
+        run: echo "Tests setup for, ${{ secrets.Auth_Token }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
