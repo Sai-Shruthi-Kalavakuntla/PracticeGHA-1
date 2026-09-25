@@ -1,5 +1,15 @@
 name: PracticeGHA
-on: ["push", "pull_request"]
+on: 
+  push:
+    branches:
+      - main
+      - deploy
+      - 'release/**'
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
