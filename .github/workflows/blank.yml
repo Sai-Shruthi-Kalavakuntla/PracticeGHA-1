@@ -1,11 +1,11 @@
 name: PracticeGHA
-on: push
+on: ["push", "pull_request"]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build setup
-        run: echo "Build setup completed"
+        run: echo "A demo Build"
   test:
     needs: build
     runs-on: ubuntu-latest
