@@ -1,17 +1,27 @@
 name: PracticeGHA
-on: push
+on: 
+  push:
+    branches:
+      - main
+      - deploy
+      - 'release/**'
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build setup
-        run: echo "Build setup completed"
+        run: echo "Build setup for, ${{ vars.My_Name }}"
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Tests setup
-        run: echo "Tests setup completed"
+        run: echo "Tests setup for, ${{ vars.My_Name }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
