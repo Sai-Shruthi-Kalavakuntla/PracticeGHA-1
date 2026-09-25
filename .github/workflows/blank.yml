@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build setup
-        run: echo "A demo Build"
+        run: echo "Build setup for, ${{ vars.My_Name }}"
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Tests setup
-        run: echo "Tests setup completed"
+        run: echo "Tests setup for, ${{ vars.My_Name }}"
   deploy:
     needs: test
     runs-on: ubuntu-latest
